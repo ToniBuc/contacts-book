@@ -1,0 +1,49 @@
+.list-wrapper {
+    width: 30%;
+
+    .header-wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 10px;
+
+        .list-title {
+            margin: 0;
+            letter-spacing: 0.1rem;
+        }
+
+        .add-contact-button {
+            text-decoration: none;
+            padding: 5px 15px;
+            border-radius: 5px;
+            background-color: rgb(60, 138, 255);
+            color: #fff;
+            font-weight: bold;
+        }
+    }
+
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        box-shadow: 0 1px 10px lightgray;
+    }
+
+    thead {
+        border-bottom: solid 1px lightgray;
+    }
+
+    th, td {
+        padding: 15px;
+        letter-spacing: 0.1rem;
+        text-align: left;
+    }
+
+    tbody {
+        tr:hover {
+            background-color: rgb(60, 138, 255);
+            color: white;
+        }
+    }
+}
+

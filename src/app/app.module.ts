@@ -7,11 +7,15 @@ import { StoreModule } from '@ngrx/store';
 import { ContactFormComponent } from './components/contact-form/contact-form.component';
 import { FormsModule } from '@angular/forms';
 import { contactReducer } from './state/contact.reducer';
+import { ContactListComponent } from './components/contact-list/contact-list.component';
+import { HomeComponent } from './components/home/home.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ContactFormComponent
+    ContactFormComponent,
+    ContactListComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
