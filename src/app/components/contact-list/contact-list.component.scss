@@ -1,5 +1,8 @@
 .list-wrapper {
-    width: 30%;
+    background-color: white;
+    padding: 25px;
+    box-shadow: 0 1px 10px lightgray;
+    border-radius: 15px;
 
     .header-wrapper {
         display: flex;
@@ -26,11 +29,14 @@
     table {
         width: 100%;
         border-collapse: collapse;
-        box-shadow: 0 1px 10px lightgray;
+        background-color: white;
+        table-layout: fixed;
+        word-break: break-all;
     }
 
     thead {
-        border-bottom: solid 1px lightgray;
+        border: 1px lightgray;
+        border-style: solid none;
     }
 
     th, td {
@@ -40,6 +46,10 @@
     }
 
     tbody {
+        .selected {
+            background-color: rgb(60, 138, 255);
+            color: white;
+        }
         tr:hover {
             background-color: rgb(60, 138, 255);
             color: white;

@@ -12,7 +12,7 @@
     </thead>
     <tbody>
       @for (contact of contacts$ | async; track contact.id) {
-        <tr>
+        <tr (click)="onSelect(contact.id)" [ngClass]="{'selected': contact.id === (selectedContact$ | async)?.id}">
           <td>{{ contact.firstName }}</td>
           <td>{{ contact.lastName }}</td>
         </tr>
