@@ -1,0 +1,36 @@
+.details-wrapper {
+    background-color: white;
+    border-radius: 15px;
+    padding: 25px;
+    box-shadow: 0 1px 10px lightgray;
+
+    .details-title {
+        margin: 0;
+        letter-spacing: 0.1rem;
+    }
+    .contact-wrapper, .no-contact-wrapper {
+        margin-top: 10px;
+    }
+
+    .contact-wrapper {
+        background-color: white;
+
+        .detail-field {
+            border-bottom: 1px solid #ccc;
+            margin-bottom: 10px;
+
+            label {
+                display: block;
+                font-weight: bold;
+                margin-bottom: 10px;
+            }
+        
+            span {
+                width: 100%;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                display: block;
+            }
+        }
+    }
+}

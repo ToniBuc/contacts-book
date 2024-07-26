@@ -9,13 +9,15 @@ import { FormsModule } from '@angular/forms';
 import { contactReducer } from './state/contact.reducer';
 import { ContactListComponent } from './components/contact-list/contact-list.component';
 import { HomeComponent } from './components/home/home.component';
+import { ContactDetailsComponent } from './components/contact-details/contact-details.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ContactFormComponent,
     ContactListComponent,
-    HomeComponent
+    HomeComponent,
+    ContactDetailsComponent
   ],
   imports: [
     BrowserModule,

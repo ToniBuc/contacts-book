@@ -1,0 +1,13 @@
+.home-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    .list-wrapper {
+        width: 40%;
+        margin-right: 60px;
+    }
+
+    .details-wrapper {
+        width: 20%;
+    }
+}

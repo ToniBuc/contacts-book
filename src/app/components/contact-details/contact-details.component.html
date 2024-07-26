@@ -1,0 +1,33 @@
+<div class="details-wrapper">
+    <h2 class="details-title">Contact Details</h2>
+    @if (selectedContact$ | async; as selectedContact) {
+        <div class="contact-wrapper">
+            <div class="detail-field">
+                <label>First name:</label>
+                <span>{{ selectedContact.firstName }}</span>
+            </div>
+            <div class="detail-field">
+                <label>Last name:</label>
+                <span>{{ selectedContact.lastName }}</span>
+            </div>
+            <div class="detail-field">
+                <label>Phone number:</label>
+                <span>{{ selectedContact.phone }}</span>
+            </div>
+            <div class="detail-field">
+                <label>Email:</label>
+                <span>{{ selectedContact.email }}</span>
+            </div>
+            <div class="detail-field">
+                <label>Address:</label>
+                <span>{{ selectedContact.address }}</span>
+            </div>
+        </div>
+    }
+    @else {
+        <div class="no-contact-wrapper">
+            <span>Select a contact to display details!</span>
+        </div>
+    }
+</div>
+
