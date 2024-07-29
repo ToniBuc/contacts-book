@@ -1,6 +1,20 @@
 .form-wrapper {
     display: flex;
     justify-content: center;
+    margin-top: 50px;
+
+    .form {
+        width: 20%;
+        padding: 25px;
+        background-color: white;
+        box-shadow: 0 1px 10px lightgray;
+        border-radius: 15px;
+    }
+
+    .form-header {
+        margin-top: 0;
+        text-align: center;
+    }
 
     .form-field {
         label {
@@ -14,6 +28,11 @@
             border-radius: 5px;
             margin: 5px 0 10px 0;
             width: 100%;
+        }
+
+        input:focus {
+            border: 1px solid rgb(60, 138, 255);
+            outline: none;
         }
     }
     
