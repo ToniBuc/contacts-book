@@ -6,6 +6,7 @@ import { FormsModule } from '@angular/forms';
 import { contactReducer } from '../../state/contact.reducer';
 import { Store, StoreModule } from '@ngrx/store';
 import { addContact } from '../../state/contact.actions';
+import { By } from '@angular/platform-browser';
 
 describe('ContactFormComponent', () => {
   let component: ContactFormComponent;
@@ -52,5 +53,18 @@ describe('ContactFormComponent', () => {
     component.onSubmit();
 
     expect(spy).toHaveBeenCalledWith(action);
+  });
+
+  it('onSubmit should be called on submit button click', () => {
+    const spy = jest.spyOn(component, 'onSubmit');
+    
+    const submitButton = fixture.debugElement.queryAll(By.css('.form-submit-button'))
+    const buttonClicked = submitButton[0];
+    const element: HTMLElement = buttonClicked.nativeElement;
+  
+    element.click();
+    fixture.detectChanges();
+
+    expect(spy).toHaveBeenCalled();
   });
 });
