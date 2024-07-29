@@ -4,23 +4,23 @@
         <div class="contact-wrapper">
             <div class="detail-field">
                 <label>First name:</label>
-                <span>{{ selectedContact.firstName }}</span>
+                <span>{{ selectedContact.firstName ? selectedContact.firstName : 'N/A' }}</span>
             </div>
             <div class="detail-field">
                 <label>Last name:</label>
-                <span>{{ selectedContact.lastName }}</span>
+                <span>{{ selectedContact.lastName ? selectedContact.lastName : 'N/A' }}</span>
             </div>
             <div class="detail-field">
                 <label>Phone number:</label>
-                <span>{{ selectedContact.phone }}</span>
+                <span>{{ selectedContact.phone ? selectedContact.phone : 'N/A' }}</span>
             </div>
             <div class="detail-field">
                 <label>Email:</label>
-                <span>{{ selectedContact.email }}</span>
+                <span>{{ selectedContact.email ? selectedContact.email : 'N/A' }}</span>
             </div>
             <div class="detail-field">
                 <label>Address:</label>
-                <span>{{ selectedContact.address }}</span>
+                <span>{{ selectedContact.address ? selectedContact.address : 'N/A' }}</span>
             </div>
         </div>
     }
