@@ -48,12 +48,8 @@ describe('ContactFormComponent', () => {
     component.contactData = mockContact;
     const action = addContact({ contact: component.contactData});
     const spy = jest.spyOn(store, 'dispatch');
-
-    const mockNgForm: any = {
-      resetForm: jest.fn()
-    }
     
-    component.onSubmit(mockNgForm);
+    component.onSubmit();
 
     expect(spy).toHaveBeenCalledWith(action);
   });

@@ -1,8 +1,8 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { Contact } from '../../state/contact.model';
 import { Store } from '@ngrx/store';
-import { NgForm } from '@angular/forms';
 import { addContact } from '../../state/contact.actions';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-contact-form',
@@ -20,11 +20,14 @@ export class ContactFormComponent {
     address: ''
   }
 
-  constructor(private store: Store) {}
+  constructor(
+    private store: Store,
+    private location: Location
+  ) {}
 
-  onSubmit(form: NgForm): void {
+  onSubmit(): void {
     const contact = { ...this.contactData };
     this.store.dispatch(addContact({ contact: contact }));
-    form.resetForm();
+    this.location.back();
   }
 }
